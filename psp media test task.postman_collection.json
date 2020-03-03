@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "b883e05e-7668-4d62-ace1-e343c21291d2",
+		"name": "psp media test task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test@mail.com\",\n\t\"first_name\": \"first\",\n\t\"last_name\": \"last\",\n\t\"gender\": \"male\",\n\t\"country\": \"US\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/customer/2",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test12@mail.com\",\n\t\"last_name\": \"last_name\",\n\t\"gender\": \"male\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/customer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/transaction/2/deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 31.21\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/transaction/1/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction",
+						"1",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/transaction/2/withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 35\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/transaction/2/withdraw",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction",
+						"2",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/report/2020-02-03/2020-03-12",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"report",
+						"2020-02-03",
+						"2020-03-12"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
